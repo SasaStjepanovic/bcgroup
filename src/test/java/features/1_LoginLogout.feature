@@ -4,6 +4,7 @@ Feature: Login scenarios include valid and invalid logins with combination of wr
   Scenario Outline: Login valid user
 
     Given a user reads test data from "bcgroup" "general" by id "<TC_ID>"
+    And user closes popup window
     And users clicks login button
     And user enters email and password for login
     Then user should be verified login action
@@ -16,6 +17,7 @@ Feature: Login scenarios include valid and invalid logins with combination of wr
   Scenario Outline: Login invalid user (empty email)
 
     Given a user reads test data from "bcgroup" "general" by id "<TC_ID>"
+    And user closes popup window
     And users clicks login button
     And user enters email and password for login
     Then user should be verified login action
@@ -28,6 +30,7 @@ Feature: Login scenarios include valid and invalid logins with combination of wr
   Scenario Outline: Login invalid user (empty password)
 
     Given a user reads test data from "bcgroup" "general" by id "<TC_ID>"
+    And user closes popup window
     And users clicks login button
     And user enters email and password for login
     Then user should be verified login action
@@ -40,6 +43,7 @@ Feature: Login scenarios include valid and invalid logins with combination of wr
   Scenario Outline: Login invalid user (empty email&password)
 
     Given a user reads test data from "bcgroup" "general" by id "<TC_ID>"
+    And user closes popup window
     And users clicks login button
     And user enters email and password for login
     Then user should be verified login action
@@ -52,6 +56,7 @@ Feature: Login scenarios include valid and invalid logins with combination of wr
   Scenario Outline: Login invalid user (invalid email/password)
 
     Given a user reads test data from "bcgroup" "general" by id "<TC_ID>"
+    And user closes popup window
     And users clicks login button
     And user enters email and password for login
     Then user should be verified login action
@@ -64,6 +69,7 @@ Feature: Login scenarios include valid and invalid logins with combination of wr
   Scenario Outline: Login invalid user (invalid password)
 
     Given a user reads test data from "bcgroup" "general" by id "<TC_ID>"
+    And user closes popup window
     And users clicks login button
     And user enters email and password for login
     Then user should be verified login action
@@ -76,6 +82,7 @@ Feature: Login scenarios include valid and invalid logins with combination of wr
   Scenario Outline: Login invalid user (invalid email)
 
     Given a user reads test data from "bcgroup" "general" by id "<TC_ID>"
+    And user closes popup window
     And users clicks login button
     And user enters email and password for login
     Then user should be verified login action
@@ -83,3 +90,18 @@ Feature: Login scenarios include valid and invalid logins with combination of wr
     Examples:
       | TC_ID  |
       | SI_007 |
+
+  @bc
+  Scenario Outline: Logout user
+
+    Given a user reads test data from "bcgroup" "general" by id "<TC_ID>"
+    And user closes popup window
+    And users clicks login button
+    And user enters email and password for login
+    Then user should be verified login action
+    And user clicks logout button
+    Then user should be verified logout action
+
+    Examples:
+      | TC_ID  |
+      | SI_001 |

@@ -10,7 +10,8 @@ public class Chrome_HeadlessDriverManager extends DriverManager{
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("start-maximized");
+        options.addArguments("--headless");
+        options.addArguments("--window-size=1920,1080");
 
         driver = new ChromeDriver(options);
     }
