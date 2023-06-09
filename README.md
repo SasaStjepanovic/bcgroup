@@ -1,3 +1,4 @@
+# Website with a very large selection of offers#
 #### This is experimental project and simulation of realistic development environment where I want to better understand processes and collaboration in development team using GIT as a version control system.
 #### I have tested one of the most comprehensive web site on the our market, which was a big challenge for me ####
 #### Also some issues have recognized and reported through the GIThub as separate tab 'issues' ####
