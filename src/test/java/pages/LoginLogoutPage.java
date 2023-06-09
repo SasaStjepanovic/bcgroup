@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginLogoutPage extends BasePage{
+public class LoginLogoutPage extends BasePage {
 
     public LoginLogoutPage(WebDriver driver) {
         super(driver);
@@ -33,27 +33,27 @@ public class LoginLogoutPage extends BasePage{
     @FindBy(xpath = "//a[@class='btn btn-primary']")
     WebElement logOutButton;
 
-    public void pressVipLoginButton(){
+    public void pressVipLoginButton() {
         clickElement(vipLoginButton, "Vip login button is pressed");
     }
 
-    public void enterEmail(String emailAddress){
+    public void enterEmail(String emailAddress) {
         typeText(email, emailAddress, " email is entered");
     }
 
-    public void enterPassword(String pass){
+    public void enterPassword(String pass) {
         typeText(password, pass, " password is entered");
     }
 
-    public void pressUlogujSeButton(){
+    public void pressUlogujSeButton() {
         clickElement(ulogujSeButton, "Uloguj se button is pressed");
     }
 
-    public void pressLogOutButton(){
+    public void pressLogOutButton() {
         clickElement(logOutButton, "Logout button is pressed");
     }
 
-    public void login(String emailAddress, String pass){
+    public void login(String emailAddress, String pass) {
         enterEmail(emailAddress);
         enterPassword(pass);
         pressUlogujSeButton();
@@ -64,21 +64,21 @@ public class LoginLogoutPage extends BasePage{
             compareText(successfulLoginLogOutMessage, expectedMessage1);
         } else if (verificationType.equalsIgnoreCase("emptyEmail")) {
             compareText(unSuccessfulLoginMessage, expectedMessage1);
-        }  else if (verificationType.equalsIgnoreCase("emptyPassword")) {
+        } else if (verificationType.equalsIgnoreCase("emptyPassword")) {
             compareText(unSuccessfulLoginMessage, expectedMessage1);
-        }  else if (verificationType.equalsIgnoreCase("emptyEmailPassword")) {
+        } else if (verificationType.equalsIgnoreCase("emptyEmailPassword")) {
             compareText(unSuccessfulLoginMessage, expectedMessage1);
-        }  else if (verificationType.equalsIgnoreCase("InvalidEmailPassword")) {
+        } else if (verificationType.equalsIgnoreCase("InvalidEmailPassword")) {
             compareText(unSuccessfulLoginMessage, expectedMessage1);
-        }  else {
+        } else {
             System.out.println("Nothing of expected messages for login verification");
         }
     }
 
-    public void verifyLogOutAction(String verificationType, String expectedMessage2){
+    public void verifyLogOutAction(String verificationType, String expectedMessage2) {
         if (verificationType.equalsIgnoreCase("validEmailPassword")) {
             compareText(successfulLoginLogOutMessage, expectedMessage2);
-        }  else {
+        } else {
             System.out.println("Nothing of expected messages for logout verification");
         }
     }

@@ -1,7 +1,7 @@
-Feature: Validation of opened product 'Klimatizacija and grejanje' page and all of products on the same page
+Feature: Validation of opened product 'Stampaci i potrosni materijal' page and all of products on the same page
 
   @bc
-  Scenario Outline: Assert all products from 'Klimatizacija i grejanje' page
+  Scenario Outline: Assert all products from 'Stampaci i potrosni materijal' page
 
     Given a user reads test data from "bcgroup" "products" by id "<TC_ID>"
     And user closes popup window
@@ -11,4 +11,15 @@ Feature: Validation of opened product 'Klimatizacija and grejanje' page and all 
 
     Examples:
       | TC_ID  |
-      | SI_007 |
+      | SI_008 |
+
+  @bc
+  Scenario Outline: Compare total number of products for 'Stampaci i potrosni materijal' on default and hover view
+
+    Given a user reads test data from "bcgroup" "products" by id "<TC_ID>"
+    And user closes popup window
+    Then user should compare default and hover number of items
+
+    Examples:
+      | TC_ID  |
+      | SI_008 |

@@ -3,6 +3,7 @@ package tests;
 import org.openqa.selenium.WebDriver;
 import selenium.DriverManager;
 import selenium.DriverManagerFactory;
+
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -10,7 +11,7 @@ public class BaseTest {
     public WebDriver driver;
     DriverManager driverManager;
 
-    public void init (String browser, String wait) throws Exception {
+    public void init(String browser, String wait) throws Exception {
         driverManager = DriverManagerFactory.getDriverManager(browser);
         driver = driverManager.getWebDriver();
         driver.manage().timeouts().implicitlyWait(Integer.parseInt(wait), TimeUnit.SECONDS);
@@ -35,7 +36,7 @@ public class BaseTest {
         }
     }
 
-    public void quit(){
+    public void quit() {
         driverManager.quitWebDriver();
     }
 }

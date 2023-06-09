@@ -1,6 +1,5 @@
 package pages;
 
-import com.github.javafaker.Faker;
 import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -16,7 +15,6 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class BasePage {
@@ -42,7 +40,7 @@ public class BasePage {
 
     public void explicitWaitInvisibilityOfElement(WebElement element) {
         WebDriverWait webDriverWait = new WebDriverWait(driver, waitTime);
-        webDriverWait.until(ExpectedConditions.invisibilityOfElementLocated((By) element));
+        webDriverWait.until(ExpectedConditions.invisibilityOf(element));
     }
 
     public void clickElement(WebElement element, String log) {
@@ -174,6 +172,14 @@ public class BasePage {
         System.out.println("Actual text is: " + actualText);
     }
 
+    public void compareNumbers(WebElement element, String expectedNumber) {
+        explicitWait(element);
+        String actualNumber = element.getText();
+        Assert.assertTrue(actualNumber.contains(expectedNumber), actualNumber);
+        System.out.println("Actual number of products into the basket is: " + actualNumber);
+
+    }
+
     public void comparePartOfText(WebElement element, String expectedText) {
         String actualTitle = element.getText();
         System.out.println("Actual text is: " + actualTitle);
@@ -181,7 +187,7 @@ public class BasePage {
     }
 
     public void checkUrlPage(String url) {
-        String expextedUrl = "https://www.internet-prodaja-guma.com/" + url;
+        String expextedUrl = "https://www.bcgroup-online.com/" + url;
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         String actualUrl = driver.getCurrentUrl();
         System.out.println("Current url address: " + actualUrl);
@@ -239,35 +245,29 @@ public class BasePage {
         }
     }
 
-
-    public String randomEmail() {
-        String email;
-        Random random = new Random();
-        int randomEmail = random.nextInt(5000);
-        email = "stjepanovic" + randomEmail + "@yahoo.com";
-        return email;
-    }
-
-
-    public String randomUser() {
-        Faker fakerData = new Faker();
-        String name = String.valueOf(fakerData.name());
-        System.out.println(name);
-        return name;
-    }
-
     public void pause(int sec) throws InterruptedException {
         Thread.sleep(sec * 1000);
     }
 
-    public void verifyButtonInvisibility(WebElement element) {
+    public void verifyInvisibilityOfElement(WebElement element) {
         explicitWaitInvisibilityOfElement(element);
-        System.out.println("Element");
+        System.out.println("Element is not displayed");
     }
 
     public void dropDownList(WebElement element, String dropText) {
         Select select = new Select(element);
         select.selectByVisibleText(dropText);
         System.out.println("Drop down menu item " + dropText + ", is selected");
+    }
+
+    protected boolean isElementPresent(WebElement el) {
+        try {
+            el.isDisplayed();
+            System.out.println("Web elemeny exist");
+            return true;
+        } catch (NoSuchElementException e) {
+            System.out.println("Web element does not exist");
+            return false;
+        }
     }
 }

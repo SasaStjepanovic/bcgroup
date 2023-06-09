@@ -5,18 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96149b58-ebaf-4675-aab8-0d2a5b06ba47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/GeneralPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/selenium/ChromeDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/selenium/ChromeDriverManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/selenium/Chrome_HeadlessDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/selenium/Chrome_HeadlessDriverManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/1_LoginLogout.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/1_LoginLogout.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/2_UserEdit.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/2_UserEdit.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/selenium/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/selenium/DriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/selenium/DriverManagerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/selenium/DriverManagerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/selenium/FirefoxDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/selenium/FirefoxDriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/10_StampaciPotrosniMaterijal.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/10_StampaciPotrosniMaterijal.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/11_MaliKucniAparati.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/11_MaliKucniAparati.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/12_LepotaZdravlje.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/12_LepotaZdravlje.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/13_Igracke.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/13_Igracke.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/14_BabyOprema.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/14_BabyOprema.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/15_Periferija.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/15_Periferija.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/16_DronoviKamere.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/16_DronoviKamere.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/17_SveZaKucuKancelariju.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/17_SveZaKucuKancelariju.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/18_SveZaBastu.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/18_SveZaBastu.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/19_AlatiPribor.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/19_AlatiPribor.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/20_SportRekreacija.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/20_SportRekreacija.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/21_AutoMotoOprema.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/21_AutoMotoOprema.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/22_ShoppingBasket.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/22_ShoppingBasket.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/3_TelevizoriProjektoriVideoAudio.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/3_TelevizoriProjektoriVideoAudio.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/4_LaptopoviTableti.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/4_LaptopoviTableti.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/5_BelaTehnika.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/5_BelaTehnika.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/6_RacunariKomponente.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/6_RacunariKomponente.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/7_Telefoni.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/7_Telefoni.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/8_Gaming.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/8_Gaming.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/9_KlimatizacijaGrejanje.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/9_KlimatizacijaGrejanje.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/GeneralPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/GeneralPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginLogoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginLogoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ShoppingBasketPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ShoppingBasketPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/UserEditPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/UserEditPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Runner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test_data/bcgroup.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_data/bcgroup.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xmls/bcgroup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xmls/bcgroup.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +75,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Desktop/QAprojekti/Automation_projekti/bcgroup/src/test/java/features&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Desktop/QAprojekti/Automation_projekti/bcgroup&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -60,6 +83,7 @@
       <recent name="selenium" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\QAprojekti\Automation_projekti\bcgroup" />
       <recent name="C:\Users\Lenovo\Desktop\QAprojekti\Automation_projekti\bcgroup\src\test\java\features" />
       <recent name="C:\Users\Lenovo\Desktop\QAprojekti\Automation_projekti\bcgroup\xmls" />
     </key>

@@ -5,7 +5,7 @@ public class DriverManagerFactory {
     public static DriverManager getDriverManager(String type) throws Exception {
         DriverManager driverManager;
 
-        switch (type.toUpperCase()){
+        switch (type.toUpperCase()) {
             case "CHROME": {
                 driverManager = new ChromeDriverManager();
             }

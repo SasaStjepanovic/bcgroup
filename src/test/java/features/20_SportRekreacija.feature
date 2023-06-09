@@ -1,7 +1,7 @@
-Feature: Validation of opened product 'Alati i pribor' page and all of products on the same page
+Feature: Validation of opened product 'Sport i rekreacija' page and all of products on the same page
 
   @bc
-  Scenario Outline: Compare total number of products for 'Alati i pribor' on default and hover view
+  Scenario Outline: Compare total number of products for 'Sport i rekreacija' on default and hover view
 
     Given a user reads test data from "bcgroup" "products" by id "<TC_ID>"
     And user closes popup window
@@ -9,4 +9,4 @@ Feature: Validation of opened product 'Alati i pribor' page and all of products 
 
     Examples:
       | TC_ID  |
-      | SI_017 |
+      | SI_018 |

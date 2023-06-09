@@ -18,7 +18,7 @@ public class UserEditPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    int waitTime1 = 10;
+    int waitTime1 = 11;
 
     @FindBy(xpath = "//a[@href='/korisnik-edit']")
     WebElement userEditButton;
@@ -87,6 +87,7 @@ public class UserEditPage extends BasePage {
         System.out.println("Random address immediately after generated is :" + randomAddress);
         return randomAddress;
     }
+
     public void enterAddress(String randomDataYesNo, String address, String randomAddress) {
         if (randomDataYesNo.equalsIgnoreCase("No")) {
             typeText(addressEl, address, "Address is entered");
@@ -97,10 +98,11 @@ public class UserEditPage extends BasePage {
 
     public String randomZip() {
         Faker fakerData = new Faker();
-        String randomZip = String.valueOf(fakerData.number().numberBetween(100000,999999));
+        String randomZip = String.valueOf(fakerData.number().numberBetween(100000, 999999));
         System.out.println("Random zip immediately after generated is :" + randomZip);
         return randomZip;
     }
+
     public void enterZip(String randomDataYesNo, String zip, String randomZip) {
         if (randomDataYesNo.equalsIgnoreCase("No")) {
             typeText(zipEl, zip, "Zip is entered");
@@ -115,6 +117,7 @@ public class UserEditPage extends BasePage {
         System.out.println("Random city immediately after generated is :" + randomCity);
         return randomCity;
     }
+
     public void enterCity(String randomDataYesNo, String city, String randomCity) {
         if (randomDataYesNo.equalsIgnoreCase("No")) {
             typeText(cityEl, city, "City is entered");
@@ -129,11 +132,12 @@ public class UserEditPage extends BasePage {
         System.out.println("Random phone number immediately after generated is :" + randomPhoneNumber);
         return randomPhoneNumber;
     }
+
     public void enterPhoneNumber(String randomDataYesNo, String phoneNumber, String randomPhone) {
         if (randomDataYesNo.equalsIgnoreCase("No")) {
             typeText(phoneEl, phoneNumber, "Phone number is entered");
         } else {
-            typeText(phoneEl,randomPhone , "Random phone number is entered");
+            typeText(phoneEl, randomPhone, "Random phone number is entered");
         }
     }
 
@@ -147,20 +151,21 @@ public class UserEditPage extends BasePage {
         getAttribute(phoneEl, randomPhoneV, attributeType);
     }
 
-    public void pressSaveChangesButton(){
+    public void pressSaveChangesButton() {
         clickElement(saveChanges, "Save changes button is pressed");
     }
 
-    public void verifyMessageAfterUserChanges(String expectedMessage1){
+    public void verifyMessageAfterUserChanges(String expectedMessage1) {
         compareText(successfulMessageAfterSaveChanges, expectedMessage1);
     }
 
-    public void verifyUnsuccessfulMessageAfterUserChanges(String expectedMessage1, String elementId){
-        WebElement element = driver.findElement(By.xpath("//input[@id='"+ elementId +"']/..//div[contains(text(),'"+ expectedMessage1 +"')]"));
+    public void verifyUnsuccessfulMessageAfterUserChanges(String expectedMessage1, String elementId) {
+        WebElement element = driver.findElement(By.xpath("//input[@id='" + elementId + "']/..//div[contains(text(),'" + expectedMessage1 + "')]"));
+        explicitWait(element);
         compareText(element, expectedMessage1);
     }
 
-    public void checkLastingMessageTime() {
+    public void timeDurationOfMessage() {
         WebDriverWait webDriverWait = new WebDriverWait(driver, waitTime1);
         webDriverWait.until(ExpectedConditions.invisibilityOf(successfulMessageAfterSaveChanges));
         System.out.println("Temporary message has disappeared");
