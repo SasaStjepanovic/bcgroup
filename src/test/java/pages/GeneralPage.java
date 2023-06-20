@@ -22,6 +22,9 @@ public class GeneralPage extends BasePage {
     @FindBy(xpath = "//div[@id='cart']//button//span[contains(text(),'Dodaj u korpu')]")
     WebElement addToCartButton;
 
+    @FindBy(xpath = "//div[@id='products']//div[1]//div[@class='pbi']/a")
+    WebElement firstFilteredProduct;
+
     public GeneralPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
@@ -56,6 +59,13 @@ public class GeneralPage extends BasePage {
         webDriverWait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//div[@id='prodCarousel']/div//div[" + sliderGroup + "]//div[" + elPositionInSliderGroup + "]"))));
         driver.findElement(By.xpath("//div[@id='prodCarousel']/div//div[" + sliderGroup + "]//div[" + elPositionInSliderGroup + "]")).click();
         System.out.println("Element has been clicked from slider position: " + elPositionInSliderGroup);
+    }
+
+    public void clickOnFirstFilteredProduct() {
+        WebDriverWait webDriverWait = new WebDriverWait(driver, 30);
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(firstFilteredProduct));
+        clickElementJS(firstFilteredProduct, "First filtered element is clicked");
+        System.out.println("First element has been clicked");
     }
 
     public void clickAddToCartButton() {

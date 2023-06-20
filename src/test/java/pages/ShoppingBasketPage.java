@@ -38,12 +38,45 @@ public class ShoppingBasketPage extends BasePage {
     @FindBy(xpath = "//span[text()=' Korpa']")
     WebElement korpaButton;
 
+    @FindBy(xpath = "//button[@id='cart-submit']")
+    WebElement posaljiPorudzbinuButton;
+
     @FindBy(xpath = "//table[@id='shopping-cart-table']//tbody/tr[1]//i[@class='glyphicon glyphicon-trash']/..//i[1]")
     WebElement deleteButton;
 
+    @FindBy(xpath = "//select[@id='payment_method']")
+    WebElement dropDownMenuPayment;
+
+    @FindBy(xpath = "//div[@id='customer-data']//div[1]//span")
+
+    WebElement verifyMeesageIme;
+
+    @FindBy(xpath = "//div[@id='customer-data']//div[2]//span")
+
+    WebElement verifyMeesagePrezime;
+
+    @FindBy(xpath = "//div[@id='customer-data']//div[3]//span")
+
+    WebElement verifyMeesageEmail;
+
+    @FindBy(xpath = "//div[@id='customer-data']//div[4]//span")
+
+    WebElement verifyMeesageTel;
+
+    @FindBy(xpath = "//div[@id='customer-data']//div[5]//span")
+
+    WebElement verifyMeesageUlica;
+
+    @FindBy(xpath = "//div[@id='customer-data']//div[6]//span")
+
+    WebElement verifyMeesageZip;
+
+    @FindBy(xpath = "//div[@id='customer-data']//div[7]//span")
+    WebElement verifyMeesageGrad;
+
+
     public void checkNumberOfBasketItemsFromMainPage(String numberOfBasketItems) {
         WebElement element = driver.findElement(By.xpath("//div[@id='links']//a[contains(text(),'" + numberOfBasketItems + "')]"));
-
         compareNumbers(element, numberOfBasketItems);
     }
 
@@ -67,6 +100,10 @@ public class ShoppingBasketPage extends BasePage {
             System.out.println("Number of product is more than 4");
 
         }
+    }
+
+    public void verifyEmptyBasket(String emptyBasketMessage){
+        comparePartOfText(shoppingBasketIsEmpty, emptyBasketMessage);
     }
 
     public void clickKorpaButton() {
@@ -93,7 +130,7 @@ public class ShoppingBasketPage extends BasePage {
         boolean b = isElementPresent(continueShoppingButton);
 
         if (b) {
-            Assert.fail("Nastavi kupovinu button is displayed");
+            Assert.fail("Error. Nastavi kupovinu button is displayed");
         } else {
             System.out.println("Nastavi kupovinu button is not displayed");
         }
@@ -104,9 +141,43 @@ public class ShoppingBasketPage extends BasePage {
         boolean b = isElementPresent(poruciButton);
 
         if (b) {
-            Assert.fail("Poruci button is displayed");
+            Assert.fail("Error. Poruci button is displayed");
         } else {
             System.out.println("Poruci button is not displayed");
         }
     }
+
+    public void clickPoruciButton() {
+        clickElement(poruciButton, "Poruci button is pressed");
+    }
+
+    public void clickPosaljiPorudzbinu(){
+        clickElement(posaljiPorudzbinuButton, "Posalji porudzbinu button is pressed");
+    }
+
+    public void choosePaymentMethod(String dropItem) {
+        dropDownList(dropDownMenuPayment, dropItem);
+    }
+
+    public void verifyMessageOnKorpaPage(String verifTag, String expectedText) throws InterruptedException {
+
+        if ((verifTag.equalsIgnoreCase("ime1")||(verifTag.equalsIgnoreCase("ime2"))||(verifTag.equalsIgnoreCase("ime3"))||(verifTag.equalsIgnoreCase("ime4")))) {
+            compareText(verifyMeesageIme, expectedText);
+        } else if ((verifTag.equalsIgnoreCase("prezime1")||(verifTag.equalsIgnoreCase("prezime2"))||(verifTag.equalsIgnoreCase("prezime3"))||(verifTag.equalsIgnoreCase("prezime4"))||(verifTag.equalsIgnoreCase("prezime5")))) {
+            compareText(verifyMeesagePrezime, expectedText);
+        } else if ((verifTag.equalsIgnoreCase("adresa1")||(verifTag.equalsIgnoreCase("adresa2"))||(verifTag.equalsIgnoreCase("adresa3"))||(verifTag.equalsIgnoreCase("adresa4")))) {
+            compareText(verifyMeesageUlica, expectedText);
+        } else if ((verifTag.equalsIgnoreCase("zip1")||(verifTag.equalsIgnoreCase("zip2"))||(verifTag.equalsIgnoreCase("zip3"))||(verifTag.equalsIgnoreCase("zip4"))||(verifTag.equalsIgnoreCase("zip5")))) {
+            compareText(verifyMeesageZip, expectedText);
+        } else if ((verifTag.equalsIgnoreCase("grad1")||(verifTag.equalsIgnoreCase("grad2"))||(verifTag.equalsIgnoreCase("grad3")))) {
+            compareText(verifyMeesageGrad, expectedText);
+        } else if ((verifTag.equalsIgnoreCase("tel1")||(verifTag.equalsIgnoreCase("tel2"))||(verifTag.equalsIgnoreCase("tel3"))||(verifTag.equalsIgnoreCase("tel4")))) {
+            compareText(verifyMeesageTel, expectedText);
+        } else {
+            compareText(verifyMeesageEmail, expectedText);
+        }
+
+    }
+
+
 }

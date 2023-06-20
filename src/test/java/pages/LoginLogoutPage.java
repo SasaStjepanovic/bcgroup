@@ -33,6 +33,9 @@ public class LoginLogoutPage extends BasePage {
     @FindBy(xpath = "//a[@class='btn btn-primary']")
     WebElement logOutButton;
 
+    @FindBy(xpath = "//span[text()=' Log out']")
+    WebElement logOutMainButton;
+
     public void pressVipLoginButton() {
         clickElement(vipLoginButton, "Vip login button is pressed");
     }
@@ -51,6 +54,10 @@ public class LoginLogoutPage extends BasePage {
 
     public void pressLogOutButton() {
         clickElement(logOutButton, "Logout button is pressed");
+    }
+
+    public void pressLogOutMainButton(){
+        clickElement(logOutMainButton, "Logout main button is pressed");
     }
 
     public void login(String emailAddress, String pass) {

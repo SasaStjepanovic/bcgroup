@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96149b58-ebaf-4675-aab8-0d2a5b06ba47" name="Changes" comment="" />
+    <list default="true" id="96149b58-ebaf-4675-aab8-0d2a5b06ba47" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/features/23_Filtering_TelevizoriProjektoriVideoAudio.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/features/24_Filtering_LaptopoviTableti.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/FilterPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid36704.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid38564.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/replay_pid36704.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/replay_pid38564.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/22_ShoppingBasket.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/22_ShoppingBasket.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/9_KlimatizacijaGrejanje.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/9_KlimatizacijaGrejanje.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/GeneralPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/GeneralPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginLogoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginLogoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ShoppingBasketPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ShoppingBasketPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/UserEditPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/UserEditPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test_data/bcgroup.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_data/bcgroup.xlsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +57,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Desktop/QAprojekti/Automation_projekti/bcgroup&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Desktop/QAprojekti/Automation_projekti/bcgroup/src/test/java/features&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -46,8 +65,8 @@
       <recent name="selenium" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Lenovo\Desktop\QAprojekti\Automation_projekti\bcgroup" />
       <recent name="C:\Users\Lenovo\Desktop\QAprojekti\Automation_projekti\bcgroup\src\test\java\features" />
+      <recent name="C:\Users\Lenovo\Desktop\QAprojekti\Automation_projekti\bcgroup" />
       <recent name="C:\Users\Lenovo\Desktop\QAprojekti\Automation_projekti\bcgroup\xmls" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">

@@ -1,6 +1,6 @@
 Feature: Validation of opened product 'Klimatizacija i grejanje' page and all of products on the same page
 
-  @bcr
+  @bc
   Scenario Outline: Assert all products from 'Klimatizacija i grejanje' page
 
     Given a user reads test data from "bcgroup" "products" by id "<TC_ID>"
@@ -13,7 +13,7 @@ Feature: Validation of opened product 'Klimatizacija i grejanje' page and all of
       | TC_ID  |
       | SI_007 |
 
-  @bcr
+  @bc
   Scenario Outline: Compare total number of products for 'Klimatizacija i grejanje' on default and hover view
 
     Given a user reads test data from "bcgroup" "products" by id "<TC_ID>"

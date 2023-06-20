@@ -20,16 +20,31 @@ import java.util.concurrent.TimeUnit;
 public class BasePage {
 
     public WebDriver driver;
-    int waitTime = 10;
+    int waitTime = 30;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
     }
+    public WebElement findElement(By by) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
+        driver.findElement(by);
+        return null;
+    }
     public void explicitWait(WebElement element) {
         WebDriverWait webDriverWait = new WebDriverWait(driver, waitTime);
         webDriverWait.until(ExpectedConditions.visibilityOf(element));
         webDriverWait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public void explicitWaitCheckBox(WebElement element) {
+        WebDriverWait webDriverWait = new WebDriverWait(driver, waitTime);
+        webDriverWait.until(ExpectedConditions.visibilityOf(element));
+        webDriverWait.until(ExpectedConditions.elementToBeSelected(element));
     }
 
     public void explicitWaitMainPopup(WebElement element) {
@@ -150,7 +165,7 @@ public class BasePage {
                 element.click();
             } else {
                 element.isSelected();
-                System.out.println("Web element is already clicked");
+                System.out.println("Web element is already checked");
             }
             System.out.println("Checked element" + log);
         } catch (Exception e) {
@@ -159,7 +174,7 @@ public class BasePage {
                 element.click();
             } else {
                 element.isSelected();
-                System.out.println("Web element is already clicked");
+                System.out.println("Web element is already checked");
             }
             System.out.println("Checked element" + log);
         }

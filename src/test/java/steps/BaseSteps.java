@@ -23,6 +23,8 @@ public class BaseSteps extends BaseTest {
 
     String randomNameVerif;
     String randomLastNameVerif;
+
+    String randomEmailVerif;
     String randomAddressVerif;
     String randomZipVerif;
     String randomCityVerif;
@@ -36,6 +38,7 @@ public class BaseSteps extends BaseTest {
 
         randomNameVerif = ue.randomName();
         randomLastNameVerif = ue.randomLastName();
+        randomEmailVerif = ue.randomEmail();
         randomAddressVerif = ue.randomAddress();
         randomZipVerif = ue.randomZip();
         randomCityVerif = ue.randomCity();
@@ -44,7 +47,7 @@ public class BaseSteps extends BaseTest {
 
     @After
     public void tearDown() {
-        quit();
+//        quit();
     }
 
 
@@ -91,6 +94,11 @@ public class BaseSteps extends BaseTest {
     @When("users enters last name")
     public void usersEntersLastName() {
         new UserEditPage(driver).enterLastName(data.get("randomDataYesNo"), data.get("lastname"), randomLastNameVerif);
+    }
+
+    @When("users enters email")
+    public void usersEntersEmail() {
+        new UserEditPage(driver).enterEmail(data.get("randomDataYesNo"), data.get("email"), randomEmailVerif);
     }
 
     @When("users enters address")
@@ -238,5 +246,67 @@ public class BaseSteps extends BaseTest {
     @Then("user should verify invisibility of poruci button")
     public void userShouldVerifyInvisibilityOfPoruciButton() {
         new ShoppingBasketPage(driver).verifyPoruciButtonInvisibility();
+    }
+
+    @And("user chooses payment method")
+    public void userChoosesPaymentMethod() {
+        ShoppingBasketPage sb = new ShoppingBasketPage(driver);
+        sb.clickKorpaButton();
+        sb.choosePaymentMethod(data.get("dropPaymentItem"));
+    }
+
+    @And("user clicks poruci button")
+    public void userClicksPoruciButton() {
+        new ShoppingBasketPage(driver).clickPoruciButton();
+    }
+
+    @Then("user should be verified verification message on korpa page")
+    public void userShouldBeVerifiedVerificationMessageOnKorpaPage() throws InterruptedException {
+        new ShoppingBasketPage(driver).verifyMessageOnKorpaPage(data.get("verificationTag"), data.get("expectedMessage1"));
+    }
+
+    @And("user clicks logout main button")
+    public void userClicksLogoutMainButton() {
+        new LoginLogoutPage(driver).pressLogOutMainButton();
+    }
+
+    @And("user deletes all products from basket")
+    public void userDeletesAllProductsFromBasket() throws InterruptedException {
+        ShoppingBasketPage sb = new ShoppingBasketPage(driver);
+        sb.clickKorpaButton();
+        sb.deleteAllProductFromBasket();
+    }
+
+    @Then("user should verify that basket is empty")
+    public void userShouldVerifyThatBasketIsEmpty() {
+        new ShoppingBasketPage(driver).verifyEmptyBasket(data.get("emptyBasketMessage"));
+    }
+
+    @And("user should apply general filter")
+    public void userShouldApplyGeneralFilter() throws InterruptedException {
+        new FilterPage(driver).applyGeneralFilter(data.get("filterTitle1"), data.get("filterValue1"), data.get("filterTitle2"), data.get("filterValue2"), data.get("filterValue3"));
+    }
+
+    @And("user should apply extend filter")
+    public void userShouldApplyExtendFilter() throws InterruptedException {
+        new FilterPage(driver).applyFilterProduct(data.get("filterTitle3"), data.get("filterTitle4"), data.get("filterValue4"), data.get("filterTitle5"), data.get("filterValue5"),
+                data.get("filterTitle6"), data.get("filterValue6"), data.get("filterTitle7"), data.get("filterValue7"), data.get("filterTitle8"), data.get("filterValue8"), data.get("filterTitle9"),
+                data.get("filterValue9"), data.get("filterValue10"));
+
+    }
+
+    @Then("user should be verified negative filtered action")
+    public void userShouldBeVerifiedNegativeFilteredAction() {
+        new FilterPage(driver).verifyNegativeFilteredMessage(data.get("filteredNegativeMessage1"));
+    }
+
+    @And("user clicks on the first filtered element")
+    public void userClicksOnTheFirstFilteredElement() {
+        new GeneralPage(driver).clickOnFirstFilteredProduct();
+    }
+
+    @Then("user should be verified positive filtered action")
+    public void userShouldBeVerifiedPositiveFilteredAction() {
+        new FilterPage(driver).verifyFilteredProductTitle(data.get("filteredTitle"));
     }
 }

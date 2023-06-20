@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -26,10 +27,16 @@ public class UserEditPage extends BasePage {
     @FindBy(css = "#name")
     WebElement nameEl;
 
-    @FindBy(css = "#lastname")
+    @FindAll({
+            @FindBy(css = "#lname"),
+            @FindBy(css = "#lastname"),
+    })
     WebElement lastnameEl;
 
-    @FindBy(css = "#address")
+    @FindAll({
+            @FindBy(css = "#adr"),
+            @FindBy(css = "#address"),
+    })
     WebElement addressEl;
 
     @FindBy(css = "#zip")
@@ -40,6 +47,9 @@ public class UserEditPage extends BasePage {
 
     @FindBy(css = "#phone")
     WebElement phoneEl;
+
+    @FindBy(css = "#email")
+    WebElement emailEl;
 
     @FindBy(css = "#edituser")
     WebElement saveChanges;
@@ -60,9 +70,9 @@ public class UserEditPage extends BasePage {
 
     public void enterName(String randomDataYesNo, String name, String randomName) {
         if (randomDataYesNo.equalsIgnoreCase("No")) {
-            typeText(nameEl, name, "Name is entered");
+            typeTextJS(nameEl, name, "Name is entered");
         } else {
-            typeText(nameEl, randomName, "Random name is entered");
+            typeTextJS(nameEl, randomName, "Random name is entered");
         }
     }
 
@@ -75,9 +85,9 @@ public class UserEditPage extends BasePage {
 
     public void enterLastName(String randomDataYesNo, String lastName, String randomLastName) {
         if (randomDataYesNo.equalsIgnoreCase("No")) {
-            typeText(lastnameEl, lastName, "Last name is entered");
+            typeTextJS(lastnameEl, lastName, "Last name is entered");
         } else {
-            typeText(lastnameEl, randomLastName, "Random last name is entered");
+            typeTextJS(lastnameEl, randomLastName, "Random last name is entered");
         }
     }
 
@@ -90,9 +100,9 @@ public class UserEditPage extends BasePage {
 
     public void enterAddress(String randomDataYesNo, String address, String randomAddress) {
         if (randomDataYesNo.equalsIgnoreCase("No")) {
-            typeText(addressEl, address, "Address is entered");
+            typeTextJS(addressEl, address, "Address is entered");
         } else {
-            typeText(addressEl, randomAddress, "Random address is entered");
+            typeTextJS(addressEl, randomAddress, "Random address is entered");
         }
     }
 
@@ -105,9 +115,9 @@ public class UserEditPage extends BasePage {
 
     public void enterZip(String randomDataYesNo, String zip, String randomZip) {
         if (randomDataYesNo.equalsIgnoreCase("No")) {
-            typeText(zipEl, zip, "Zip is entered");
+            typeTextJS(zipEl, zip, "Zip is entered");
         } else {
-            typeText(zipEl, randomZip, "Random zip is entered");
+            typeTextJS(zipEl, randomZip, "Random zip is entered");
         }
     }
 
@@ -120,9 +130,9 @@ public class UserEditPage extends BasePage {
 
     public void enterCity(String randomDataYesNo, String city, String randomCity) {
         if (randomDataYesNo.equalsIgnoreCase("No")) {
-            typeText(cityEl, city, "City is entered");
+            typeTextJS(cityEl, city, "City is entered");
         } else {
-            typeText(cityEl, randomCity, "Random city is entered");
+            typeTextJS(cityEl, randomCity, "Random city is entered");
         }
     }
 
@@ -135,9 +145,24 @@ public class UserEditPage extends BasePage {
 
     public void enterPhoneNumber(String randomDataYesNo, String phoneNumber, String randomPhone) {
         if (randomDataYesNo.equalsIgnoreCase("No")) {
-            typeText(phoneEl, phoneNumber, "Phone number is entered");
+            typeTextJS(phoneEl, phoneNumber, "Phone number is entered");
         } else {
-            typeText(phoneEl, randomPhone, "Random phone number is entered");
+            typeTextJS(phoneEl, randomPhone, "Random phone number is entered");
+        }
+    }
+
+    public String randomEmail() {
+        Faker fakerData = new Faker();
+        String randomEmail = String.valueOf(fakerData.internet().emailAddress());
+        System.out.println("Random email immediately after generated is :" + randomEmail);
+        return randomEmail;
+    }
+
+    public void enterEmail(String randomDataYesNo, String email, String randomEmail) {
+        if (randomDataYesNo.equalsIgnoreCase("No")) {
+            typeTextJS(emailEl, email, "Email is entered");
+        } else {
+            typeTextJS(emailEl, randomEmail, "Random email is entered");
         }
     }
 
