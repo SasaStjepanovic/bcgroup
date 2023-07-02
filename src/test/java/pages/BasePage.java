@@ -155,25 +155,33 @@ public class BasePage {
         }
     }
 
-    public void checkCheckbox(WebElement element, String log) {
-        explicitWait(element);
+    public void checkCheckbox(WebElement element1,WebElement element2, String log) {
+        explicitWait(element1);
 
         try {
-            scrollToElement(element);
-            new Actions(driver).moveToElement(element).perform();
-            if (!element.isSelected()) {
-                element.click();
+            scrollToElement(element1);
+            new Actions(driver).moveToElement(element1).perform();
+            if (!element1.isSelected()) {
+                if (!element1.isEnabled()) {
+                    new Actions(driver).moveToElement(element2).perform();
+                    System.out.println("Element was not enable at the first moment");
+                }
+                    else {
+                    element1.click();
+                    }
+
             } else {
-                element.isSelected();
+                element1.isSelected();
                 System.out.println("Web element is already checked");
             }
             System.out.println("Checked element" + log);
         } catch (Exception e) {
             e.printStackTrace();
-            if (!element.isSelected()) {
-                element.click();
+            new Actions(driver).moveToElement(element1).perform();
+            if (!element1.isSelected()) {
+                element1.click();
             } else {
-                element.isSelected();
+                element1.isSelected();
                 System.out.println("Web element is already checked");
             }
             System.out.println("Checked element" + log);

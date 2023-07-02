@@ -33,7 +33,10 @@ public class ShoppingBasketPage extends BasePage {
     WebElement shoppingBasketNotEmpty;
 
     @FindBy(xpath = "//div[@id='cartwrap']//div[text()='Vaša korpa je prazna']")
-    WebElement shoppingBasketIsEmpty;
+    WebElement shoppingBasketIsEmpty1;
+
+    @FindBy(xpath = "//div[@id='cartwrap']//div")
+    WebElement shoppingBasketIsEmpty2;
 
     @FindBy(xpath = "//span[text()=' Korpa']")
     WebElement korpaButton;
@@ -103,7 +106,11 @@ public class ShoppingBasketPage extends BasePage {
     }
 
     public void verifyEmptyBasket(String emptyBasketMessage){
-        comparePartOfText(shoppingBasketIsEmpty, emptyBasketMessage);
+        comparePartOfText(shoppingBasketIsEmpty1, emptyBasketMessage);
+    }
+
+    public void verifySuccessfulOrder(String emptyBasketMessage){
+        comparePartOfText(shoppingBasketIsEmpty2, emptyBasketMessage);
     }
 
     public void clickKorpaButton() {
@@ -152,7 +159,7 @@ public class ShoppingBasketPage extends BasePage {
     }
 
     public void clickPosaljiPorudzbinu(){
-        clickElement(posaljiPorudzbinuButton, "Posalji porudzbinu button is pressed");
+        clickElementJS(posaljiPorudzbinuButton, "Posalji porudzbinu button is pressed");
     }
 
     public void choosePaymentMethod(String dropItem) {

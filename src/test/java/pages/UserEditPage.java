@@ -147,7 +147,7 @@ public class UserEditPage extends BasePage {
         if (randomDataYesNo.equalsIgnoreCase("No")) {
             typeTextJS(phoneEl, phoneNumber, "Phone number is entered");
         } else {
-            typeTextJS(phoneEl, randomPhone, "Random phone number is entered");
+            typeTextJS(phoneEl, phoneNumber, "Phone number is entered");
         }
     }
 

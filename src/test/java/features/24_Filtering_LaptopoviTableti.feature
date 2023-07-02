@@ -3,7 +3,7 @@ Feature:Different kind filtering of Laptopovi with positive and negative respons
   @bc
   Scenario Outline: Apply filter for not available Laptop
 
-    Given a user reads test data from "bcgroup" "TvProjektoriVideoAudio" by id "<TC_ID>"
+    Given a user reads test data from "bcgroup" "LaptopoviTableti" by id "<TC_ID>"
     And user closes popup window
     And user clicks product type
     And user clicks sub product type
@@ -13,12 +13,12 @@ Feature:Different kind filtering of Laptopovi with positive and negative respons
 
     Examples:
       | TC_ID  |
-      | SI_004 |
+      | SI_005 |
 
-  @bc
+  @bcr
   Scenario Outline: Apply filter for available Laptop
 
-    Given a user reads test data from "bcgroup" "TvProjektoriVideoAudio" by id "<TC_ID>"
+    Given a user reads test data from "bcgroup" "LaptopoviTableti" by id "<TC_ID>"
     And user closes popup window
     And user clicks product type
     And user clicks sub product type
@@ -29,4 +29,4 @@ Feature:Different kind filtering of Laptopovi with positive and negative respons
 
     Examples:
       | TC_ID  |
-      | SI_005 |
+      | SI_004 |

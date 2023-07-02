@@ -47,7 +47,7 @@ public class BaseSteps extends BaseTest {
 
     @After
     public void tearDown() {
-//        quit();
+        quit();
     }
 
 
@@ -279,7 +279,7 @@ public class BaseSteps extends BaseTest {
 
     @Then("user should verify that basket is empty")
     public void userShouldVerifyThatBasketIsEmpty() {
-        new ShoppingBasketPage(driver).verifyEmptyBasket(data.get("emptyBasketMessage"));
+        new ShoppingBasketPage(driver).verifySuccessfulOrder(data.get("emptyBasketMessage"));
     }
 
     @And("user should apply general filter")
@@ -308,5 +308,10 @@ public class BaseSteps extends BaseTest {
     @Then("user should be verified positive filtered action")
     public void userShouldBeVerifiedPositiveFilteredAction() {
         new FilterPage(driver).verifyFilteredProductTitle(data.get("filteredTitle"));
+    }
+
+    @And("user clicks posalji porudzbinu button")
+    public void userClicksPosaljiPorudzbinuButton() {
+        new ShoppingBasketPage(driver).clickPosaljiPorudzbinu();
     }
 }

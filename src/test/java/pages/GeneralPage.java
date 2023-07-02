@@ -64,8 +64,16 @@ public class GeneralPage extends BasePage {
     public void clickOnFirstFilteredProduct() {
         WebDriverWait webDriverWait = new WebDriverWait(driver, 30);
         webDriverWait.until(ExpectedConditions.elementToBeClickable(firstFilteredProduct));
-        clickElementJS(firstFilteredProduct, "First filtered element is clicked");
-        System.out.println("First element has been clicked");
+
+        try {
+            clickElementJS(firstFilteredProduct, "First filtered element is clicked by JS");
+            System.out.println("First element has been clicked");
+
+        } catch (Exception e) {
+            clickElement(firstFilteredProduct, "First filtered element is clicked");
+            System.out.println("First element has been clicked");
+
+        }
     }
 
     public void clickAddToCartButton() {
@@ -74,8 +82,9 @@ public class GeneralPage extends BasePage {
 
     public void hoverOverProductType(String productType) throws InterruptedException {
         Actions actions = new Actions(driver);
+        Thread.sleep(200);
         actions.moveToElement(driver.findElement(By.xpath("//div[@id='mainnavwrap']//li//li/a[contains(text(),'" + productType + "')]"))).build().perform();
-        System.out.println("hover is pressed");
+        System.out.println("hover is pressed over the: " + productType );
     }
 
     int menuSizeDefault = 0;
@@ -120,11 +129,11 @@ public class GeneralPage extends BasePage {
 
         hoverOverProductType(productType);
         int totalHoverItems = checkTotalNumbersOfSubProductHoverItems();
-        System.out.println("total hovers item: " + totalHoverItems);
+        System.out.println("Total hovers item: " + totalHoverItems);
 
         clickOnProductType(productType);
         int totalDefaultNumbers = checkTotalNumbersOfSubProductDefaultItems();
-        System.out.println("total hovers item: " + totalHoverItems);
+        System.out.println("Total items on page: " + totalDefaultNumbers);
 
         Assert.assertEquals(totalHoverItems, totalDefaultNumbers);
 

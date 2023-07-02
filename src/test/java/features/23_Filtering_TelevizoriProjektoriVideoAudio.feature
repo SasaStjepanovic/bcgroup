@@ -24,8 +24,8 @@ Feature:Different kind filtering of 'Televizori,Projektori,Video,Audio' ptoducts
     And user clicks sub product type
     And user should apply general filter
     And user should apply extend filter
-#    And user clicks on the first filtered element
-#    Then user should be verified positive filtered action
+    And user clicks on the first filtered element
+    Then user should be verified positive filtered action
 
     Examples:
       | TC_ID  |

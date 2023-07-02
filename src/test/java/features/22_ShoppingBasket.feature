@@ -848,3 +848,28 @@ Feature: Add products to the basket, verification amount of products into the ba
     Examples:
       | TC_ID  |
       | SI_031 |
+
+  @bc
+  Scenario Outline: Buy more products, click 'Poruci' button, choose method payment, filled random own data, press 'Posalji porudzbinu' button and verify that basket is empty
+
+    Given a user reads test data from "bcgroup" "products" by id "<TC_ID>"
+    And user closes popup window
+    And users clicks login button
+    And user enters email and password for login
+    And user add products to basket
+    Then user should verify number of items from basket on the main page
+    And user chooses payment method
+    And user clicks poruci button
+    When users enters name
+    When users enters last name
+    When users enters email
+    When users enters address
+    When users enters zip code
+    When users enters city
+    When users enters phone number
+    And user clicks posalji porudzbinu button
+    Then user should verify that basket is empty
+
+    Examples:
+      | TC_ID |
+      | SI_032|

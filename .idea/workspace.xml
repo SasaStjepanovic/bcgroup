@@ -5,22 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96149b58-ebaf-4675-aab8-0d2a5b06ba47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/features/23_Filtering_TelevizoriProjektoriVideoAudio.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/features/24_Filtering_LaptopoviTableti.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/FilterPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid36704.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid38564.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/replay_pid36704.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/replay_pid38564.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/22_ShoppingBasket.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/22_ShoppingBasket.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/9_KlimatizacijaGrejanje.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/9_KlimatizacijaGrejanje.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/23_Filtering_TelevizoriProjektoriVideoAudio.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/23_Filtering_TelevizoriProjektoriVideoAudio.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/24_Filtering_LaptopoviTableti.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/24_Filtering_LaptopoviTableti.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/FilterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/FilterPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/GeneralPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/GeneralPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginLogoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginLogoutPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/ShoppingBasketPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ShoppingBasketPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/UserEditPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/UserEditPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Runner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/BaseSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/test_data/bcgroup.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test_data/bcgroup.xlsx" afterDir="false" />
     </list>
@@ -113,5 +107,25 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pages/FilterPage.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/pages/LoginLogoutPage.java</url>
+          <line>42</line>
+          <properties class="pages.LoginLogoutPage" method="enterEmail">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
